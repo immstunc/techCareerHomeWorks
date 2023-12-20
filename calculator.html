@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+        <label for="">Number1</label>
+        
+        <input type="text" id="number1">
+
+        <label for="">Number2</label>
+
+        <input type="text" id="number2">
+    </div>
+
+    <div>
+        <button onclick="sum()">+</button>
+    </div>
+
+    <div>
+        <button onclick="sub()">-</button>
+    </div>
+
+    <div>
+        <button onclick="multiply()">*</button>
+    </div>
+
+    <div>
+        <button onclick="division()">/</button>
+    </div>
+    <hr>
+    <div>
+        <ul>
+
+        </ul>
+    </div>
+
+</body>
+<script>
+        
+    function sum(){
+
+        
+        var number1 = document.getElementById("number1").value
+        if (isNaN(number1) ){
+            alert("Enter a valid number!!")
+        }
+        var number2 = document.getElementById("number2").value
+        if (isNaN(number2) ){
+            alert("Enter a valid number!!")
+        }
+        var sonuc = parseInt(number1) + parseInt(number2)
+        alert("Result: "+sonuc)
+    
+        
+    }
+
+    function sub(){
+
+        
+var number1 = document.getElementById("number1").value
+if (isNaN(number1) ){
+    alert("Enter a valid number!!")
+}
+var number2 = document.getElementById("number2").value
+if (isNaN(number2) ){
+    alert("Enter a valid number!!")
+}
+var sonuc = number1 - number2
+alert("Result: "+sonuc)
+
+
+}
+
+function multiply(){
+
+        
+var number1 = document.getElementById("number1").value
+if (isNaN(number1) ){
+    alert("Enter a valid number!!")
+}
+var number2 = document.getElementById("number2").value
+if (isNaN(number2) ){
+    alert("Enter a valid number!!")
+}
+var sonuc = number1 * number2
+alert("Result: "+sonuc)
+
+
+}
+
+function division(){
+
+        
+var number1 = document.getElementById("number1").value
+if (isNaN(number1) ){
+    alert("Enter a valid number!!")
+}
+var number2 = document.getElementById("number2").value
+if (isNaN(number2) ){
+    alert("Enter a valid number!!")
+}
+var sonuc = number1 / number2
+alert("Result: "+sonuc)
+
+
+}
+</script>
+</html>

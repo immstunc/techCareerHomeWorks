@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+        <label for="">Price</label>
+        <input type="text" id="price">
+    </div>
+
+    <div>
+        <button onclick="calculate()">Calculate the rated value</button>
+    </div>
+    <hr>
+    <div>
+        <ul>
+
+        </ul>
+    </div>
+
+</body>
+<script>
+        
+        function calculate(){
+
+            
+            var ratePrice = document.getElementById("price").value
+            if (isNaN(ratePrice) ){
+                alert("Enter a valid number!!")
+            }
+            var calculatedRate = ratePrice*1.8
+            
+
+            var liElement = document.createElement("li")
+            liElement.innerHTML = ratePrice + "'s calculated rate is:" + calculatedRate
+
+            document.querySelector("ul").appendChild(liElement)
+        }
+</script>
+</html>
