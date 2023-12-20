@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="addRandom()">Add Random Number</button>
+    <ul></ul>
+
+    <script>
+        var randomArray = [];
+        var count = 0;
+
+        function addRandom(){
+            var randomNumber;
+
+            do {
+                randomNumber = Math.floor(Math.random() * 10);
+            } while (randomArray.includes(randomNumber));
+
+            randomArray.push(randomNumber);
+
+            console.log(randomArray[randomArray.length-1], randomArray.length);
+
+            var liElement = document.createElement("li");
+            liElement.innerHTML = randomNumber;
+
+            document.querySelector("ul").appendChild(liElement);
+
+            if (randomArray.length == 10){
+                var liElement = document.createElement("li");
+            liElement.innerHTML = "reached max number";
+
+            document.querySelector("ul").appendChild(liElement);
+
+            }
+        }
+    </script>
+</body>
+</html>
